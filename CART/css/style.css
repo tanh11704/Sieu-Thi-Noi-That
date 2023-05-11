@@ -1,5 +1,60 @@
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.wrap {
+    margin: auto 75px;
+}
+
+.title__color {
+    color: #D2B89C;
+}
+
+/* HEADER */
+
+header {
+    background-color: #D2B89C;
+}
+
+.header__logo i {
+    font-size: 2rem;
+}
+
+.background_color_second {
+    background-color: #F3F9FB !important;
+}
+
+.header__search input {
+    box-shadow: none !important;
+}
+
+/*********** MAIN ***********/
+/* MENU */
+
+.menu>span {
+    color: #D2B89C;
+}
+
+/* CONTENT */
+.content>h1 {
+    color: #D2B89C;
+}
+
+.form-check-input,
+.form-check-input:focus {
+    border: 1px solid #D2B89C;
+}
+
+.form-check-input:checked {
+    background-color: #D2B89C;
+    border: 1px solid #D2B89C;
 }
