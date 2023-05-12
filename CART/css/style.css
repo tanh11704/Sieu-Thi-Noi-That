@@ -1,4 +1,4 @@
-/* GLOBAL */
+/*********** GLOBAL ***********/
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +11,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #D2B89C;
+}
+
 .wrap {
     margin: auto 75px;
 }
@@ -19,7 +23,21 @@ a {
     color: #D2B89C;
 }
 
-/* HEADER */
+.price__color {
+    color: #FD475A;
+}
+
+button {
+    border: 1px solid #D2B89C !important;
+    color: #D2B89C;
+}
+
+button:hover {
+    background-color: #D2B89C !important;
+    color: white;
+}
+
+/*********** HEADER ***********/
 
 header {
     background-color: #D2B89C;
@@ -58,3 +76,68 @@ header {
     background-color: #D2B89C;
     border: 1px solid #D2B89C;
 }
+
+.content__body__product select {
+    border: 1px solid #D2B89C;
+    color: #D2B89C;
+}
+
+.content__body__product select:focus {
+    border: 1px solid #D2B89C;
+}
+
+.content__body__product .count,
+#color {
+    color: #D2B89C;
+}
+
+.content__body__form {
+    width: 50%;
+}
+
+.content__body__form>div>input:focus,
+.content__body__form>div>select:focus,
+.content__body__form>div>textarea:focus {
+    border: 1px solid #D2B89C;
+}
+
+/*********** FOOTER ***********/
+footer {
+    background-color: #D2B89C;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 575.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .wrap {
+        margin: auto 10px;
+    }
+
+    .content__body__form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 1399.98px) {}

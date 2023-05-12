@@ -50,26 +50,49 @@
                 <span>Giỏ hàng</span>
             </section>
             <section class="content">
-                <h1 class="text-center fw-bold">GIỎ HÀNG</h1>
-                <div class="content__body my-4">
-                    <div class="content__body__product">
-                        <div class="card mb-3 border-0 shadow" style="max-width: 540px;">
+                <h1 class="text-center fw-bold my-3">GIỎ HÀNG</h1>
+                <div class="content__body my-4 row justify-content-lg-between justify-content-center">
+                    <div class="content__body__product me-2 col-lg-5 col-md-12">
+                        <div class="card mb-3 border-0 shadow">
                             <div class="row g-0">
-                                <div class="col-md-4 p-4">
+                                <div class="col-4 p-4">
                                     <img src="./img/chest.png" class="img-fluid rounded-start" alt="...">
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-8">
                                     <div class="card-body pt-1 pe-1">
                                         <div class="card-text text-end">
                                             <input class="form-check-input shadow-none" type="checkbox" id="checkbox">
                                         </div>
                                         <h5 class="card-title fw-bold">TỦ NGĂN KÉO SUND</h5>
-                                        <div class="row pe-5">
+                                        <div class="row pe-5 mb-2">
                                             <div class="col">Số lượng</div>
                                             <div class="col row">
                                                 <button class="col bg-white p-0 border-1">-</button>
-                                                <span class="col  text-center">1</span>
+                                                <span class="count col  text-center">1</span>
                                                 <button class="col bg-white p-0 border-1">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="row pe-5 mb-2">
+                                            <div class="col">Màu sắc</div>
+                                            <div class="col">
+                                                <select id="color"
+                                                    class="form-control py-0 ps-2 shadow-none text-center">
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row pe-5 mb-2">
+                                            <div class="col">Đơn giá</div>
+                                            <div class="col">
+                                                <span class="price__color fw-bold">1.000.000</span>
+                                            </div>
+                                        </div>
+                                        <div class="row pe-5 mb-2">
+                                            <div class="col">Tổng tiền</div>
+                                            <div class="col">
+                                                <span class="price__color fw-bold">1.000.000</span>
                                             </div>
                                         </div>
                                     </div>
@@ -77,14 +100,126 @@
                             </div>
                         </div>
                     </div>
+                    <form action="" class="content__body__form shadow border-0 px-5 pb-4 ms-2 col-lg-4 col-md-12">
+                        <legend class="title__color text-center fw-bold">Thông tin đặt hàng</legend>
+                        <div class="mb-3">
+                            <input class="form-control rounded-pill ps-3 shadow-none" type="text"
+                                placeholder="Họ và tên*">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control rounded-pill ps-3 shadow-none" type="text"
+                                placeholder="Số điện thoại*">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control rounded-pill ps-3 shadow-none" type="text"
+                                placeholder="Địa chỉ email*">
+                        </div>
+                        <div class="mb-3">
+                            <strong>Địa chỉ nhận hàng</strong>
+                        </div>
+                        <div class="mb-3 d-flex">
+                            <select class="form-select rounded-pill me-2 shadow-none">
+                                <option selected>Tỉnh</option>
+                                <option value="1">Hà Nội</option>
+                                <option value="2">Đà Nẵng</option>
+                                <option value="3">Hồ Chí Minh</option>
+                            </select>
+                            <select class="form-select rounded-pill ms-2 shadow-none">
+                                <option selected>Huyện</option>
+                                <option value="1">Hà Nội</option>
+                                <option value="2">Đà Nẵng</option>
+                                <option value="3">Hồ Chí Minh</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="" id="" cols="30" rows="3" class="form-control rounded-3 shadow-none"
+                                placeholder="Ghi chú"></textarea>
+                        </div>
+                        <div class="mb-3 d-flex justify-content-between">
+                            <strong>Thông tin thanh toán</strong>
+                            <strong>Tổng tiền: <span class="price__color">1.000.000</span></strong>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select shadow-none" aria-label="Default select example">
+                                <option selected>Hình thức thanh toán</option>
+                                <option value="1">Thanh toán khi nhận hàng</option>
+                                <option value="2">Chuyển tiền qua ngân hàng</option>
+                                <option value="3">Chuyển tiền qua MoMo</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 ms-4 d-none">
+                            Chủ tài khoản: TRAN PHUOC ANH <br>
+                            Số tài khoản: 1019558246 <br>
+                            Ngân hàng: VIETCOMBANK <br>
+                            Chi nhánh: Quảng Nam
+                        </div>
+                        <div class="mb-3">
+                            <button class="rounded-pill form-control title__color" type="submit">
+                                Xác nhận và thanh toán
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-
+    <footer class="p-4 text-white">
+        <div class="wrap">
+            <div class="row">
+                <div class="col-12 col-md-4 my-4">
+                    <div class="header__logo d-flex align-items-center">
+                        <img src="./img/logo.png" class="me-2" alt="">
+                        <div class="text-white">
+                            <b>GIA ĐÌNH</b> <br>
+                            <b>LÀ SỐ 1</b> <br>
+                            Furniture Home
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <strong>Gia đình nội thất</strong> với tiêu chí "Vừa bền và vừa rẻ". <br>
+                        <strong>Gia đình nội thất</strong> được biết đến với lĩnh vực cung cấp nội thất cho toàn quốc.
+                        Với các sản phẩm bàn ghế, sofa, giường ngủ,...
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 my-4">
+                    <h4>Thông tin liên hệ</h4>
+                    <div class="ps-4 my-3 ">
+                        <h5>Điện thoại</h5>
+                        <div class="ps-4">
+                            <a href="tel:+84 912 650 143">+84 912 650 143</a> <br>
+                            <a href="tel:+84 773 605 741">+84 773 605 741</a> <br>
+                            <a href="tel:+84 789 994 686">+84 789 994 686</a> <br>
+                            <a href="tel:+84 368 724 204">+84 368 724 204</a>
+                        </div>
+                    </div>
+                    <div class="ps-4">
+                        <h5>Mail</h5>
+                        <div class="ps-4">
+                            <a href="mailto:anhtp.22it@vku.udn.vn">anhtp.22it@vku.udn.vn</a> <br>
+                            <a href="mailto:phongnt.22it@vku.udn.vn">phongnt.22it@vku.udn.vn</a> <br>
+                            <a href="mailto:lanhntm.22it@vku.udn.vn">lanhntm.22it@vku.udn.vn</a> <br>
+                            <a href="mailto:huyennlk@vku.udn.vn">huyennlk@vku.udn.vn</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 my-4">
+                    <h4>Hỗ trợ - Dịch vụ</h4>
+                    <div class="my-3 ">
+                        <a href="#">Hướng dẫn đặt hàng và thanh toán</a> <br>
+                        <a href="#">Tra cứu đơn hàng</a> <br>
+                        <a href="#">Chính sách đổi trả và hoàn tiền</a> <br>
+                        <a href="#">Chính sách bảo hành</a> <br>
+                        <a href="#">Phạm vi và điều khoản gói bảo hành</a> <br>
+                        <a href="#">Chính sách bảo mật thông tin</a> <br>
+                        <a href="#">Chính sách giải quyết khiếu nại</a> <br>
+                        <a href="#">Liên hệ với chúng tôi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
