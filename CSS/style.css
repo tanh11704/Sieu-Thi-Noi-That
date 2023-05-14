@@ -1,26 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-/* Header Start  */
-#header {
-    display: flex;
-    background-color: #D2B89C;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-   
-}
-.logo {
-    display: flex;
-    align-items: center;
-   
+
+.wrap {
+    margin: auto 75px;
 }
 
 .logo img{
@@ -145,51 +130,27 @@ ul{
     }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .image-logo{
-        width: 90px;
-        height: 50px;
-      }
-
-      
-    #header {
-        display: flex;
-        background-color: #D2B89C;
-        height: 70px;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 4px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        
+/* RESPONSIVE */
+@media (max-width: 575.98px) {
+    .wrap {
+        margin: auto 0;
     }
-
-    #search{
-        width: 10rem;
-        height: 2rem;
-        border-radius: 7px;
-        border: none;
-        /* Khoang cach giữa chữ và input */
-        text-indent: 20px;
-        font-size: 13px;
-        position: relative;
-    }
-    .fi-br-search{
-        position: absolute;
-        right: 7px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 13px;
-    }
-    
-    .btn{
-    background-color: #D2B89C;
-    border: none;
-    font-size: 11px;
 }
+
+@media (max-width: 767.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .wrap {
+        margin: auto 10px;
+    }
+
+    .content__body__form {
+        width: 100%;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
