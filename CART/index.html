@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <title>Giỏ hàng</title>
 </head>
 
@@ -52,7 +54,7 @@
             <section class="content">
                 <h1 class="text-center fw-bold my-3">GIỎ HÀNG</h1>
                 <div class="content__body my-4 row justify-content-lg-between justify-content-center">
-                    <div class="content__body__product me-2 col-lg-5 col-md-12">
+                    <div class="content__body__products me-2 col-lg-5 col-md-12">
                         <div class="card mb-3 border-0 shadow">
                             <div class="row g-0">
                                 <div class="col-4 p-4">
@@ -67,9 +69,9 @@
                                         <div class="row pe-5 mb-2">
                                             <div class="col">Số lượng</div>
                                             <div class="col row">
-                                                <button class="col bg-white p-0 border-1">-</button>
+                                                <button class="col bg-white p-0 border-1 minus">-</button>
                                                 <span class="count col  text-center">1</span>
-                                                <button class="col bg-white p-0 border-1">+</button>
+                                                <button class="col bg-white p-0 border-1 add">+</button>
                                             </div>
                                         </div>
                                         <div class="row pe-5 mb-2">
@@ -92,7 +94,7 @@
                                         <div class="row pe-5 mb-2">
                                             <div class="col">Tổng tiền</div>
                                             <div class="col">
-                                                <span class="price__color fw-bold">1.000.000</span>
+                                                <span class="price__color fw-bold priceTotal">1.000.000</span>
                                             </div>
                                         </div>
                                     </div>
@@ -113,9 +115,9 @@
                                         <div class="row pe-5 mb-2">
                                             <div class="col">Số lượng</div>
                                             <div class="col row">
-                                                <button class="col bg-white p-0 border-1">-</button>
+                                                <button class="col bg-white p-0 border-1 minus">-</button>
                                                 <span class="count col  text-center">1</span>
-                                                <button class="col bg-white p-0 border-1">+</button>
+                                                <button class="col bg-white p-0 border-1 add">+</button>
                                             </div>
                                         </div>
                                         <div class="row pe-5 mb-2">
@@ -132,13 +134,13 @@
                                         <div class="row pe-5 mb-2">
                                             <div class="col">Đơn giá</div>
                                             <div class="col">
-                                                <span class="price__color fw-bold">1.000.000</span>
+                                                <span class="price__color fw-bold priceProduct">1.000.000</span>
                                             </div>
                                         </div>
                                         <div class="row pe-5 mb-2">
                                             <div class="col">Tổng tiền</div>
                                             <div class="col">
-                                                <span class="price__color fw-bold">1.000.000</span>
+                                                <span class="price__color fw-bold priceProductTotal">1.000.000</span>
                                             </div>
                                         </div>
                                     </div>
@@ -186,18 +188,25 @@
                             <strong>Tổng tiền: <span class="price__color">1.000.000</span></strong>
                         </div>
                         <div class="mb-3">
-                            <select class="form-select shadow-none" aria-label="Default select example">
+                            <select class="form-select shadow-none" id="payment-selected"
+                                aria-label="Default select example">
                                 <option selected>Hình thức thanh toán</option>
                                 <option value="1">Thanh toán khi nhận hàng</option>
                                 <option value="2">Chuyển tiền qua ngân hàng</option>
                                 <option value="3">Chuyển tiền qua MoMo</option>
                             </select>
                         </div>
-                        <div class="mb-3 ms-4 d-none">
-                            Chủ tài khoản: TRAN PHUOC ANH <br>
-                            Số tài khoản: 1019558246 <br>
-                            Ngân hàng: VIETCOMBANK <br>
-                            Chi nhánh: Quảng Nam
+                        <div class="mb-3 ms-4 d-none" id="bank-transfer">
+                            <strong>Chủ tài khoản:</strong> TRAN PHUOC ANH <br>
+                            <strong>Số tài khoản:</strong> 1019558246 <br>
+                            <strong>Ngân hàng:</strong> VIETCOMBANK <br>
+                            <strong>Chi nhánh:</strong> Quảng Nam
+                        </div>
+                        <div class="mb-3 ms-4 d-none" id="momo-transfer">
+                            <strong>Chủ tài khoản:</strong> TRAN PHUOC ANH <br>
+                            <strong>Số tài khoản:</strong> 0773605741 <br>
+                            <strong>Ngân hàng:</strong> MOMO <br>
+                            <strong>Chi nhánh:</strong> Quảng Nam
                         </div>
                         <div class="mb-3">
                             <button class="rounded-pill form-control title__color" type="submit">
@@ -268,6 +277,7 @@
         </div>
     </footer>
 
+    <script src="./js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>

@@ -77,16 +77,16 @@ header {
     border: 1px solid #D2B89C;
 }
 
-.content__body__product select {
+.content__body__products select {
     border: 1px solid #D2B89C;
     color: #D2B89C;
 }
 
-.content__body__product select:focus {
+.content__body__products select:focus {
     border: 1px solid #D2B89C;
 }
 
-.content__body__product .count,
+.content__body__products .count,
 #color {
     color: #D2B89C;
 }
