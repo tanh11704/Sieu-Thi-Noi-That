@@ -39,6 +39,27 @@ header {
 
 
 
+/*********** CONTENT ***********/
+.navbar-brand{
+    text-transform: uppercase;
+}
+
+/* Section San Pham Start */
+.main-txt h1{
+    text-transform: uppercase;
+    color: #D2B89C;
+}
+.card-body h3 {
+    text-align: center;
+}
+.card-body h6{
+    color: red;
+}
+/* Section San Pham End */
+
+/*********** CONTENT END***********/
+
+
 
 /*********** FOOTER ***********/
 footer {
@@ -92,3 +113,149 @@ footer a:hover {
 @media (max-width: 1199.98px) {}
 
 @media (max-width: 1399.98px) {}
+/* Navigation Start */
+#nav{
+    margin-top: 70px;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 152px;
+
+}
+
+#nav button{
+    font-size: 16px;
+    width: 20px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    border: none;
+    padding: 6px 50px;
+    cursor: pointer;
+}
+#nav button:hover{
+    background-color: #D2B89C;
+    color: white;
+}
+/* Navigition End */
+#content{
+    width: 100%;
+    
+}
+
+/*********** FOOTER ***********/
+footer {
+    clear: both;
+    background-color: #D2B89C;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 575.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .wrap {
+        margin: auto 10px;
+    }
+
+    .content__body__form {
+        width: 100%;
+    }
+}
+
+/* Reponsive */
+@media only screen and (max-width: 970px) {
+    #header {
+        padding: 0 15px;
+    }
+    #search{
+        width: 20rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .image-logo{
+        width: 90px;
+        height: 50px;
+      }
+
+      
+    #header {
+        display: flex;
+        background-color: #D2B89C;
+        height: 70px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+
+    #search{
+        width: 10rem;
+        height: 2rem;
+        border-radius: 7px;
+        border: none;
+        /* Khoang cach giữa chữ và input */
+        text-indent: 20px;
+        font-size: 13px;
+        position: relative;
+    }
+    .fi-br-search{
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 13px;
+    }
+    
+    .btn{
+    background-color: #D2B89C;
+    border: none;
+    font-size: 11px;
+}
+    .intro-container {
+        margin: auto 5px;
+    }
+    .intro-container .text-right{
+        padding-left: 5px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .btn{
+        background-color:#D2B89C;
+        border: none;
+        font-size: 18px;
+    }
+}
