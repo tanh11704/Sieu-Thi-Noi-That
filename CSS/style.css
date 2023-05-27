@@ -40,21 +40,24 @@ header {
 
 
 /*********** CONTENT ***********/
-.navbar-brand{
+.navbar-brand {
     text-transform: uppercase;
 }
 
 /* Section San Pham Start */
-.main-txt h1{
+.main-txt h1 {
     text-transform: uppercase;
     color: #D2B89C;
 }
+
 .card-body h3 {
     text-align: center;
 }
-.card-body h6{
+
+.card-body h6 {
     color: red;
 }
+
 /* Section San Pham End */
 
 /*********** CONTENT END***********/
@@ -113,8 +116,9 @@ footer a:hover {
 @media (max-width: 1199.98px) {}
 
 @media (max-width: 1399.98px) {}
+
 /* Navigation Start */
-#nav{
+#nav {
     margin-top: 70px;
     height: 120px;
     background-color: white;
@@ -125,7 +129,7 @@ footer a:hover {
 
 }
 
-#nav button{
+#nav button {
     font-size: 16px;
     width: 20px;
     height: 80px;
@@ -138,14 +142,16 @@ footer a:hover {
     padding: 6px 50px;
     cursor: pointer;
 }
-#nav button:hover{
+
+#nav button:hover {
     background-color: #D2B89C;
     color: white;
 }
+
 /* Navigition End */
-#content{
+#content {
     width: 100%;
-    
+
 }
 
 /*********** FOOTER ***********/
@@ -159,6 +165,7 @@ footer a {
     text-decoration: none;
 
 }
+
 footer a:hover {
     color: white;
     text-decoration: underline;
@@ -193,19 +200,20 @@ footer a:hover {
     #header {
         padding: 0 15px;
     }
-    #search{
+
+    #search {
         width: 20rem;
     }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .image-logo{
+    .image-logo {
         width: 90px;
         height: 50px;
-      }
+    }
 
-      
+
     #header {
         display: flex;
         background-color: #D2B89C;
@@ -217,10 +225,10 @@ footer a:hover {
         position: fixed;
         top: 0;
         left: 0;
-        
+
     }
 
-    #search{
+    #search {
         width: 10rem;
         height: 2rem;
         border-radius: 7px;
@@ -230,31 +238,34 @@ footer a:hover {
         font-size: 13px;
         position: relative;
     }
-    .fi-br-search{
+
+    .fi-br-search {
         position: absolute;
         right: 7px;
         top: 50%;
         transform: translateY(-50%);
         font-size: 13px;
     }
-    
-    .btn{
-    background-color: #D2B89C;
-    border: none;
-    font-size: 11px;
-}
+
+    .btn {
+        background-color: #D2B89C;
+        border: none;
+        font-size: 11px;
+    }
+
     .intro-container {
         margin: auto 5px;
     }
-    .intro-container .text-right{
+
+    .intro-container .text-right {
         padding-left: 5px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .btn{
-        background-color:#D2B89C;
+    .btn {
+        background-color: #D2B89C;
         border: none;
         font-size: 18px;
     }

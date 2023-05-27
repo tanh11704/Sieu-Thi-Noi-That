@@ -104,34 +104,24 @@ $(document).ready(function () {
     let email = $(this).find('input[name="txtMail"]').val();
     let province = $(this).find('select[name="province"]').val();
     let district = $(this).find('select[name="district"]').val();
-    let paymentMethod = $(this).find('#payment-selected"]').val();
+    let paymentMethod = $(this).find("#payment-selected").val();
     console.log(province);
     if (totalPrice === 0) {
       alert("Vui lòng chọn sản phẩm để thanh toán!");
-    }
-
-    if (fullName.length == 0) {
+    } else if (fullName.length === 0) {
       alert("Vui lòng nhập họ tên của bạn!");
-    }
-
-    if (checkPhoneNumber(phoneNumber) === false) {
+    } else if (checkPhoneNumber(phoneNumber) === false) {
       alert("Vui lòng nhập đúng định dạng số điện thoại!");
-    }
-
-    if (checkMail(email) === false) {
+    } else if (checkMail(email) === false) {
       alert("Vui lòng nhập đúng định dạng email!");
-    }
-
-    if (province === 0) {
+    } else if (province === 0) {
       alert("Vui lòng chọn Tỉnh thành của bạn!");
-    }
-
-    if (district === 0) {
+    } else if (district === 0) {
       alert("Vui lòng chọn Huyện của bạn!");
-    }
-
-    if (paymentMethod === 0) {
+    } else if (paymentMethod === 0) {
       alert("Vui lòng chọn hình thức thanh toán!");
+    } else {
+      alert("Thanh toán thành công!");
     }
   });
 });
