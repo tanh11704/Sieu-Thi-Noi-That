@@ -1,0 +1,64 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.price__color {
+    color: #FD475A;
+    font-weight: 800;
+}
+
+button {
+    border: 1px solid #D2B89C !important;
+    color: #D2B89C;
+    width: 40px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: #D2B89C !important;
+    color: white;
+}
+
+/* PAYMENT */
+
+.payment-component {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    overflow: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.payment-parent {
+    z-index: 10000;
+    background-color: #fff;
+    padding: 10px 10px;
+}
+
+.payment-content {
+    width: 90%;
+}
+
+.choose__product__version .version {
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.choose__product__version .version:hover {
+    border: 1px solid #D2B89C;
+}
+
+.infomation .count {
+    color: #D2B89C;
+}
+
+/* CLOSE BUTTON */
+.close-button button {
+    width: 30px;
+    height: 30px;
+}
