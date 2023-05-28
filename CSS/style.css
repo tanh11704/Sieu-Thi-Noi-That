@@ -7,13 +7,13 @@
 .wrap {
     margin: auto 75px;
 }
-
 a {
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(84, 84, 247) !important;
+    background-color: #D2B89C;
+    color: white !important;
 }
 
 /*********** HEADER ***********/
@@ -36,11 +36,31 @@ header {
 
 /*********** NAVIGATION BAR ***********/
 
+.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 
 /*********** CONTENT ***********/
-.navbar-brand{
+#body {
+    padding: 0 4rem;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.navbar-brand {
     text-transform: uppercase;
+}
+h1 {
+    color: #D2B89C;
+    margin-top: 10px;
+}
+span {
+    color: #D2B89C;
+}
+.tieu-de {
+    text-transform: uppercase;
+    color: #D2B89C;
+    margin-top: 40px;
 }
 
 /* Section San Pham Start */
@@ -48,10 +68,14 @@ header {
     text-transform: uppercase;
     color: #D2B89C;
 }
-.card-body h3 {
-    text-align: center;
+del {
+    color: #d3ced2;
 }
-.card-body h6{
+.card-body h4 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.card-body h5{
     color: red;
 }
 /* Section San Pham End */
