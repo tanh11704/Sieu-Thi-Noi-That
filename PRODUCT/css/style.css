@@ -1,5 +1,145 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+
+.wrap {
+    margin: auto 75px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(84, 84, 247) !important;
+}
+
+/*********** HEADER ***********/
+
+header {
+    background-color: #D2B89C;
+}
+
+.header__logo i {
+    font-size: 2rem;
+}
+
+.background_color_second {
+    background-color: #F3F9FB !important;
+}
+
+.header__search input {
+    box-shadow: none !important;
+}
+/*********** NAVIGATION BAR ***********/
+
+/*********** CONTENT ***********/
+.banner-collection-header{
+  background-image: url('/img/phongkhach.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 90% 70%;
+  height: 600px;
+}
+.banner-collection-header nav{
+    background: rgba(82, 77, 74, 0.3)
+}
+
+.banner-collection-header .page-header-wrapper h1{
+    position: absolute;
+    color: #FFFCFC;
+    left: calc(50% - 232px/2 - 500px);
+    top: calc(50% - 21px/2 + 260px);
+
+}
+
+#products .box-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#products .box-container .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#products .box-container .row .box{
+    width: 400px;
+    height: auto;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .1);
+    border-radius: 8px;
+    margin: 0 10px 0 10px;
+}
+
+#products .box-container .row .box {
+    padding: 20px 20px 20px 20px;
+    
+}
+
+#products .box-container .row .box img{
+    width: 360px;
+    height: 215px;
+}
+
+#products .box-container .row .box:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .1);
+}
+
+#products .box-container .row .box .price{
+    color: #D2B89C;
+    font-weight: bold;
+}
+/*********** FOOTER ***********/
+footer {
+    background-color: #D2B89C;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Footer End */
+
+@media only screen and (max-width: 970px) {
+    #header {
+        padding: 0 15px;
+    }
+
+    #search {
+        width: 20rem;
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 575.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wrap {
+        margin: auto 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .wrap {
+        margin: auto 10px;
+    }
+
+    .content__body__form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 1399.98px) {}
