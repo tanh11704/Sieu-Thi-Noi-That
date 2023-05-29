@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -8,14 +10,17 @@
 .wrap {
     margin: auto 75px;
 }
+
 a {
     text-decoration: none;
 }
-.container-fluid{
+
+.container-fluid {
     padding: 0;
 }
-a:hover ,
-.home-page{
+
+a:hover,
+.home-page {
     background-color: #D2B89C;
     color: white !important;
 }
@@ -41,7 +46,7 @@ header {
 
 /*********** NAVIGATION BAR ***********/
 
-.navbar{
+.navbar {
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -50,20 +55,24 @@ header {
 /*********** CONTENT ***********/
 #body {
     padding: 0 4rem;
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 .navbar-brand {
     text-transform: uppercase;
     margin: 0;
     padding: 0 20px;
 }
+
 h1 {
     color: #D2B89C;
     margin-top: 10px;
 }
+
 span {
     color: #D2B89C;
 }
+
 .tieu-de {
     text-transform: uppercase;
     color: #D2B89C;
@@ -75,14 +84,17 @@ span {
     text-transform: uppercase;
     color: #D2B89C;
 }
+
 del {
     color: #d3ced2;
 }
+
 .card-body h4 {
     text-align: center;
     text-transform: uppercase;
 }
-.card-body h5{
+
+.card-body h5 {
     color: red;
 }
 
