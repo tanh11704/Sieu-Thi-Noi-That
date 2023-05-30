@@ -6,16 +6,15 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    transition: all 0.4s ease-in-out;
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
 a:hover {
-    color: #D2B89C;
+    color: lightgray;
 }
 
 .wrap {
@@ -28,16 +27,6 @@ a:hover {
 
 .price__color {
     color: #FD475A;
-}
-
-button {
-    border: 1px solid #D2B89C !important;
-    color: #D2B89C;
-}
-
-button:hover {
-    background-color: #D2B89C !important;
-    color: white;
 }
 
 /*********** HEADER ***********/
@@ -56,6 +45,104 @@ header {
 
 .header__search input {
     box-shadow: none !important;
+}
+
+/*********** MAIN ***********/
+.menu * {
+    color: #777979;
+}
+
+.menu>span {
+    color: #D2B89C;
+}
+
+.choose__product>div>div>div:nth-child(2) {
+    background-color: #D2B89C;
+}
+
+.choose__product__version .version {
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+.choose__product__version .version:hover {
+    border: 1px solid #D2B89C;
+}
+
+/* OFFER */
+.product__offer {
+    border: 1px solid #FD475A;
+}
+
+.product__offer li {
+    color: #FD475A;
+}
+
+#buyNow {
+    border: 2px solid #D2B89C;
+    background-color: white;
+}
+
+#buyNow * {
+    color: #D2B89C;
+    transition: 0.8s;
+}
+
+#buyNow:hover {
+    background-color: #D2B89C;
+}
+
+#buyNow:hover * {
+    color: white;
+}
+
+#installment {
+    border: 2px solid #FD475A;
+    background-color: white;
+}
+
+#installment * {
+    color: #FD475A;
+    transition: 0.8s;
+}
+
+#installment:hover {
+    background-color: #FD475A;
+}
+
+#installment:hover * {
+    color: white;
+}
+
+#addCart {
+    border: 2px solid #FF990E;
+    background-color: white;
+}
+
+#addCart * {
+    color: #FF990E;
+    transition: 0.8s;
+}
+
+#addCart:hover {
+    background-color: #FF990E;
+}
+
+#addCart:hover * {
+    color: white;
+}
+
+.accordion-button {
+    background-color: white !important;
+    color: black !important;
+}
+
+.accordion-button:focus {
+    border: none !important;
 }
 
 /*********** FOOTER ***********/
@@ -77,6 +164,14 @@ footer a:hover {
     .wrap {
         margin: auto 0;
     }
+
+    .header__user>* {
+        display: block;
+    }
+
+    .header__user__line {
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -92,6 +187,14 @@ footer a:hover {
 
     .content__body__form {
         width: 100%;
+    }
+
+    .header__user>* {
+        display: block;
+    }
+
+    .header__user__line {
+        display: none;
     }
 }
 
