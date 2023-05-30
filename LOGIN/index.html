@@ -9,10 +9,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Đăng nhập</title>
 </head>
 
 <body>
+    <div class="container">
+        <div class="box">
+            <div class="form sign_in">
+                <h3>Đăng nhập</h3>
+                <form action="#" id="form_input">
+                    <div class="type">
+                        <input type="email" placeholder="Email" name="" id="email">
+
+                    </div>
+                    <div class="type">
+                        <input type="password" placeholder="Mật khẩu" name="" id="password">
+
+                    </div>
+
+                    <div class="forgot">
+                        <span>QUÊN MẬT KHẨU</span>
+                    </div>
+
+                    <button class="btn bkg">ĐĂNG NHẬP</button>
+                    <div class="forgotten">
+                        <p>Chưa có tài khoản? <a href="#" class="đk" id="changeRegisterForm"><strong>Đăng
+                                    Kí</strong></a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form sign_up">
+                <h3>ĐĂNG KÍ</h3>
+
+
+                <div class="d-flex justify-content-center">
+                    <form action="#" id="form_input">
+                        <div class="type">
+
+                            <input type="text" name="" placeholder="Tên" id="name">
+                        </div>
+                        <div class="type">
+
+                            <input type="email" name="" placeholder="Email" id="email">
+                        </div>
+                        <div class="type">
+
+                            <input type="password" name="" placeholder="Mật khẩu" id="password">
+                        </div>
+
+                        <button class="btn bkg">ĐĂNG KÍ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div class="page page_signIn">
+                <h3>CHÀO MỪNG TRỞ LẠI</h3>
+                <p>Vui lòng đăng nhập với thông tin của bạn</p>
+
+                <button class="btn btnSign-in"> ĐĂNG KÍ <i class="bi bi-arrow-right"></i></button>
+            </div>
+
+            <div class="page page_signUp">
+                <h3>Chào Bạn!</h3>
+                <p>Hãy nhập thông tin của bạn</p>
+
+                <button class="btn btnSign-up">
+                    <i class="bi bi-arrow-left"></i> Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- link script -->
+    <script src="js/index.js" lang="javascript"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
