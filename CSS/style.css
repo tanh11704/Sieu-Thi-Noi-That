@@ -42,10 +42,23 @@ header {
 /*********** NAVIGATION BAR ***********/
 
 .navbar{
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar-brand{
+    border: 2px solid #D2B89C;
+    border-radius: 40%;
+    color: black;
+}
+hr{
+    width: 100%;
 }
 
+.navi {
+    gap: 1rem;
+    justify-content: center;
+
+}
 
 /*********** CONTENT ***********/
 #body {
