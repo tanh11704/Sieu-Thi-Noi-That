@@ -61,6 +61,16 @@ header {
     border-radius: 40px;
 }
 
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    padding: 0 18rem;
+}
+
+.carousel{
+width: 100%;
+ }
+
 /*********** CONTENT ***********/
 #body {
     padding: 0 4rem;
