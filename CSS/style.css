@@ -119,6 +119,47 @@ del {
 
 /* Section San Pham End */
 
+
+/* Product Start */
+#products .box-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#products .box-container .row {
+    display: flex;
+    flex-direction: row;
+}
+
+#products .box-container .row .box{
+    width: 400px;
+    height: auto;
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .1);
+    border-radius: 8px;
+    margin: 0 10px 0 10px;
+}
+
+#products .box-container .row .box {
+    padding: 20px 20px 20px 20px;
+    
+}
+
+#products .box-container .row .box img{
+    width: 360px;
+    height: 215px;
+}
+
+#products .box-container .row .box:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgb(0, 0, 0, .1);
+}
+
+#products .box-container .row .box .price{
+    color: #D2B89C;
+    font-weight: bold;
+}
+/* Product End */
+
 /*********** CONTENT END***********/
 
 
