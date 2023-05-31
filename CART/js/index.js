@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  loadProducts();
+  loadPrice();
+
   $("#payment-selected").change(function () {
     $("#bank-transfer").addClass("d-none");
     $("#momo-transfer").addClass("d-none");
@@ -174,5 +177,71 @@ function checkMail(mail) {
     return true;
   } else {
     return false;
+  }
+}
+
+function loadProducts() {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  let cartContainer = document.querySelector(".content__body__products");
+
+  if (cartItems.length === 0) {
+    cartContainer.innerHTML = "<h3 class='fw-bold'>Giỏ hàng trống.</h3>";
+  } else {
+    let html = "";
+
+    for (let i = 0; i < cartItems.length; i++) {
+      let product = cartItems[i];
+      html += `<div class="card mb-3 border-0 shadow">
+      <div class="row g-0">
+          <div class="col-4 p-4">
+              <img src="${
+                product.image_url
+              }" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-8">
+              <div class="card-body pt-1 pe-1">
+                  <div class="card-text text-end">
+                      <input class="form-check-input shadow-none" type="checkbox" id="checkbox">
+                  </div>
+                  <h5 class="card-title fw-bold">${product.name}</h5>
+                  <div class="row pe-5 mb-2">
+                      <div class="col">Số lượng</div>
+                      <div class="col row">
+                          <button class="col bg-white p-0 border-1 minus">-</button>
+                          <span class="count col  text-center">1</span>
+                          <button class="col bg-white p-0 border-1 add">+</button>
+                      </div>
+                  </div>
+                  <div class="row pe-5 mb-2">
+                      <div class="col">Màu sắc</div>
+                      <div class="col">
+                          <select id="color"
+                              class="form-control py-0 ps-2 shadow-none text-center">
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row pe-5 mb-2">
+                      <div class="col">Đơn giá</div>
+                      <div class="col">
+                          <span class="price__color fw-bold price"> ${product.price.toLocaleString()} </span>
+                      </div>
+                  </div>
+                  <div class="row pe-5 mb-2">
+                      <div class="col">Tổng tiền</div>
+                      <div class="col">
+                          <span class="price__color fw-bold priceTotal"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>`;
+    }
+
+    cartContainer.innerHTML = html;
   }
 }
