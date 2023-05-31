@@ -91,6 +91,21 @@ header {
     color: #D2B89C;
     font-weight: bold;
 }
+
+#products .box-container .row  .addToCart {
+    border: 1px solid #D2B89C;
+    border-radius: 20px;
+    margin: 0 112px;
+    background-color: white;
+    color: #D2B89C;
+    padding: 5px 25px;
+    font-size: 18px;
+}
+#products .box-container .row  .addToCart:hover{
+    background-color: #D2B89C;
+    color: white;
+}
+
 /*********** FOOTER ***********/
 footer {
     background-color: #D2B89C;

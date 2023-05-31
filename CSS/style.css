@@ -108,13 +108,14 @@ del {
     color: #d3ced2;
 }
 
-.card-body h4 {
+.card-body h5 {
     text-align: center;
     text-transform: uppercase;
 }
 
-.card-body h5 {
+.card-body h6 {
     color: red;
+    font-weight: bold;
 }
 
 /* Section San Pham End */
@@ -162,6 +163,7 @@ del {
     border: 1px solid #D2B89C;
     border-radius: 20px;
     margin: 0 112px;
+    background-color: white;
     color: #D2B89C;
     padding: 5px 25px;
     font-size: 18px;
