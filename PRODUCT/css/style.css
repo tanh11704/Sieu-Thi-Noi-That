@@ -88,8 +88,16 @@ header {
 }
 
 #products .box-container .row .box .price{
-    color: #D2B89C;
+    color: red;
     font-weight: bold;
+}
+
+h5 {
+    text-align: center;
+    text-transform: uppercase;
+}
+del {
+    color: #D2B89C;
 }
 
 #products .box-container .row  .addToCart {
