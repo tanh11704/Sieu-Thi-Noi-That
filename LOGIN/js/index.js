@@ -8,6 +8,17 @@ $(document).ready(function () {
     $(".sign_in").addClass("d-none");
     $(selector).addClass(className);
   });
+
+  $(".sign_in .bkg").click(function (e) {
+    e.preventDefault();
+    const email = $(".sign_in input[name='email'").val();
+    const pass = $(".sign_in input[name='password'").val();
+    if (email === "admin@gmail.com" && pass === "123") {
+      window.location.href = "../index.html";
+    } else {
+      alert("Sai tên đăng nhập hoặc mật khẩu!");
+    }
+  });
 });
 
 btnSignIn.addEventListener("click", () => {
