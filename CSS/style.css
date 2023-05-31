@@ -19,7 +19,7 @@ a {
     padding: 0;
 }
 
-a:hover,
+.navbar-brand:hover,
 .home-page {
     background-color: #D2B89C;
     color: white !important;
@@ -154,10 +154,23 @@ del {
     box-shadow: 0 10px 20px rgb(0, 0, 0, .1);
 }
 
-#products .box-container .row .box .price{
+/* #products .box-container .row .box .price{
     color: #D2B89C;
     font-weight: bold;
+} */
+#products .box-container .row  .addToCart {
+    border: 1px solid #D2B89C;
+    border-radius: 20px;
+    margin: 0 112px;
+    color: #D2B89C;
+    padding: 5px 25px;
+    font-size: 18px;
 }
+#products .box-container .row  .addToCart:hover{
+    background-color: #D2B89C;
+    color: white;
+}
+
 /* Product End */
 
 /*********** CONTENT END***********/
@@ -167,6 +180,7 @@ del {
 /*********** FOOTER ***********/
 footer {
     background-color: #D2B89C;
+    margin-top: 20px;
 }
 
 footer a {
