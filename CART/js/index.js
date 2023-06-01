@@ -40,7 +40,6 @@ $(document).ready(function () {
       ".content__body__products input[type='checkbox']:checked"
     );
     let listProductsCheckedElement = $(checkedElement).closest(".card-body");
-    console.log(listProductsCheckedElement);
     for (let i = 0; i < listProductsCheckedElement.length; i++) {
       pricesTotal += parseFloat(
         $(listProductsCheckedElement[i])
@@ -108,7 +107,6 @@ $(document).ready(function () {
     let province = $(this).find('select[name="province"]').val();
     let district = $(this).find('select[name="district"]').val();
     let paymentMethod = $(this).find("#payment-selected").val();
-    console.log(province);
     if (totalPrice === 0) {
       alert("Vui lòng chọn sản phẩm để thanh toán!");
     } else if (fullName.length === 0) {
@@ -125,6 +123,20 @@ $(document).ready(function () {
       alert("Vui lòng chọn hình thức thanh toán!");
     } else {
       alert("Thanh toán thành công!");
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      let checkedElement = $(
+        ".content__body__products input[type='checkbox']:checked"
+      );
+      let listProductsCheckedElements = $(checkedElement).closest(".card-body");
+      $(listProductsCheckedElements).each(function () {
+        let nameProductChecked = $(this).find("h5").text();
+        cartItems = cartItems.filter(
+          (item) => item.name !== nameProductChecked
+        );
+      });
+
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      loadProducts();
     }
   });
 
