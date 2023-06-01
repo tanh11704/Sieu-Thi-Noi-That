@@ -40,7 +40,6 @@ $(document).ready(function () {
       ".content__body__products input[type='checkbox']:checked"
     );
     let listProductsCheckedElement = $(checkedElement).closest(".card-body");
-    console.log(listProductsCheckedElement);
     for (let i = 0; i < listProductsCheckedElement.length; i++) {
       pricesTotal += parseFloat(
         $(listProductsCheckedElement[i])
@@ -49,7 +48,7 @@ $(document).ready(function () {
           .replaceAll(",", "")
       );
     }
-    $(".pricesTotal").text(pricesTotal.toLocaleString('en'));
+    $(".pricesTotal").text(pricesTotal.toLocaleString("en"));
   });
 
   $(".content__body__form input[name='txtName']").change(function (e) {
@@ -108,7 +107,6 @@ $(document).ready(function () {
     let province = $(this).find('select[name="province"]').val();
     let district = $(this).find('select[name="district"]').val();
     let paymentMethod = $(this).find("#payment-selected").val();
-    console.log(province);
     if (totalPrice === 0) {
       alert("Vui lòng chọn sản phẩm để thanh toán!");
     } else if (fullName.length === 0) {
@@ -125,6 +123,43 @@ $(document).ready(function () {
       alert("Vui lòng chọn hình thức thanh toán!");
     } else {
       alert("Thanh toán thành công!");
+      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      let checkedElement = $(
+        ".content__body__products input[type='checkbox']:checked"
+      );
+      let listProductsCheckedElements = $(checkedElement).closest(".card-body");
+      $(listProductsCheckedElements).each(function () {
+        let nameProductChecked = $(this).find("h5").text();
+        cartItems = cartItems.filter(
+          (item) => item.name !== nameProductChecked
+        );
+      });
+
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      loadProducts();
+    }
+  });
+
+  $(".content__body__form select[name='province']").change(function (e) {
+    e.preventDefault();
+    let provinceId = $(this).val();
+    let district = $(".content__body__form select[name='district']");
+    district.find("option").not(":first").remove();
+    if (provinceId === "1") {
+      district.append('<option value="1">Hoàn Kiếm</option>');
+      district.append('<option value="2">Ba Đình</option>');
+      district.append('<option value="3">Đống Đa</option>');
+      district.append('<option value="4">Hai Bà Trưng</option>');
+    } else if (provinceId === "2") {
+      district.append('<option value="1">Hải Châu</option>');
+      district.append('<option value="2">Sơn Trà</option>');
+      district.append('<option value="3">Ngũ Hành Sơn</option>');
+      district.append('<option value="3">Hòa Khánh</option>');
+    } else if (provinceId === "3") {
+      district.append('<option value="1">Quận Bình Tân</option>');
+      district.append('<option value="2">Quận Bình Thạnh</option>');
+      district.append('<option value="3">Quận Gò Vấp</option>');
+      district.append('<option value="4">Quận Phú Nhuận</option>');
     }
   });
 });
@@ -141,7 +176,7 @@ function loadPrice() {
     let productPrice = parseFloat(prodcutPriceText.replaceAll(",", ""));
     $(listProductsElement[i])
       .find(".priceTotal")
-      .text((prodcutCount * productPrice).toLocaleString('en'));
+      .text((prodcutCount * productPrice).toLocaleString("en"));
   }
   let pricesTotal = 0;
   let checkedElement = $(
@@ -157,7 +192,7 @@ function loadPrice() {
         .replaceAll(",", "")
     );
   }
-  $(".pricesTotal").text(pricesTotal.toLocaleString('en'));
+  $(".pricesTotal").text(pricesTotal.toLocaleString("en"));
 }
 
 function checkPhoneNumber(phoneNumber) {
@@ -227,7 +262,9 @@ function loadProducts() {
                   <div class="row pe-5 mb-2">
                       <div class="col">Đơn giá</div>
                       <div class="col">
-                          <span class="price__color fw-bold price"> ${product.price.toLocaleString('en')} </span>
+                          <span class="price__color fw-bold price"> ${product.price.toLocaleString(
+                            "en"
+                          )} </span>
                       </div>
                   </div>
                   <div class="row pe-5 mb-2">

@@ -6,6 +6,7 @@ $(document).ready(function () {
   $("#changeRegisterForm").click(function (e) {
     e.preventDefault();
     $(".sign_in").addClass("d-none");
+    $(".sign_up").addClass("d-block");
     $(selector).addClass(className);
   });
 
