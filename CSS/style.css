@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
+
+html {
+    width: 100vw;
+}
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +17,9 @@
 
 a {
     text-decoration: none;
+}
+span{
+    color: white;
 }
 
 .container-fluid {
@@ -64,7 +71,7 @@ header {
 .carousel-container{
     display: flex;
     justify-content: center;
-    padding: 0 18rem;
+    padding: 0 22rem;
 }
 
 .carousel{
@@ -87,9 +94,9 @@ h1 {
     color: #D2B89C;
     margin-top: 10px;
 }
-
-span {
+.ten{
     color: #D2B89C;
+
 }
 
 .tieu-de {
@@ -111,6 +118,7 @@ del {
 .card-body h5 {
     text-align: center;
     text-transform: uppercase;
+    color: black;
 }
 
 .card-body h6 {
@@ -371,6 +379,11 @@ footer a:hover {
 
     .intro-container {
         margin: auto 5px;
+    }
+
+    .intro-inner{
+        display: flex;
+        justify-content: space-between;
     }
 
     .intro-container .text-right {
