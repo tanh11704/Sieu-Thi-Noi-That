@@ -49,7 +49,7 @@ $(document).ready(function () {
           .replaceAll(",", "")
       );
     }
-    $(".pricesTotal").text(pricesTotal.toLocaleString());
+    $(".pricesTotal").text(pricesTotal.toLocaleString('en'));
   });
 
   $(".content__body__form input[name='txtName']").change(function (e) {
@@ -141,7 +141,7 @@ function loadPrice() {
     let productPrice = parseFloat(prodcutPriceText.replaceAll(",", ""));
     $(listProductsElement[i])
       .find(".priceTotal")
-      .text((prodcutCount * productPrice).toLocaleString());
+      .text((prodcutCount * productPrice).toLocaleString('en'));
   }
   let pricesTotal = 0;
   let checkedElement = $(
@@ -157,7 +157,7 @@ function loadPrice() {
         .replaceAll(",", "")
     );
   }
-  $(".pricesTotal").text(pricesTotal.toLocaleString());
+  $(".pricesTotal").text(pricesTotal.toLocaleString('en'));
 }
 
 function checkPhoneNumber(phoneNumber) {
@@ -227,7 +227,7 @@ function loadProducts() {
                   <div class="row pe-5 mb-2">
                       <div class="col">Đơn giá</div>
                       <div class="col">
-                          <span class="price__color fw-bold price"> ${product.price.toLocaleString()} </span>
+                          <span class="price__color fw-bold price"> ${product.price.toLocaleString('en')} </span>
                       </div>
                   </div>
                   <div class="row pe-5 mb-2">
