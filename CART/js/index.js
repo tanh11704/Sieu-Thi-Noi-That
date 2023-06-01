@@ -127,6 +127,29 @@ $(document).ready(function () {
       alert("Thanh toán thành công!");
     }
   });
+
+  $(".content__body__form select[name='province']").change(function (e) {
+    e.preventDefault();
+    let provinceId = $(this).val();
+    let district = $(".content__body__form select[name='district']");
+    district.find("option").not(":first").remove();
+    if (provinceId === "1") {
+      district.append('<option value="1">Hoàn Kiếm</option>');
+      district.append('<option value="2">Ba Đình</option>');
+      district.append('<option value="3">Đống Đa</option>');
+      district.append('<option value="4">Hai Bà Trưng</option>');
+    } else if (provinceId === "2") {
+      district.append('<option value="1">Hải Châu</option>');
+      district.append('<option value="2">Sơn Trà</option>');
+      district.append('<option value="3">Ngũ Hành Sơn</option>');
+      district.append('<option value="3">Hòa Khánh</option>');
+    } else if (provinceId === "3") {
+      district.append('<option value="1">Quận Bình Tân</option>');
+      district.append('<option value="2">Quận Bình Thạnh</option>');
+      district.append('<option value="3">Quận Gò Vấp</option>');
+      district.append('<option value="4">Quận Phú Nhuận</option>');
+    }
+  });
 });
 
 loadPrice();
