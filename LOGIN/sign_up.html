@@ -56,20 +56,24 @@
         <section class="login-parent">
             <div class="text-center">
                 <div class="title">
-                    <h3>Đăng nhập</h3>
+                    <h3>Đăng Kí</h3>
                 </div>
                 <div class="sign-up">
-                    <span style="color: #808191;">Bạn chưa có tài khoản? </span><a href="./sign_up.html"
-                        class="text-decoration-none">Đăng kí</a>
+                    <span style="color: #808191;">Bạn đã có tài khoản? </span><a href="./index.html"
+                        class="text-decoration-none">Đăng nhập</a>
                 </div>
                 <div class="btn-sign-up">
                     <button class="btn form-control d-flex align-items-center justify-content-center">
                         <img class="me-2" src="./img/google_logo.png" alt="google logo">
-                        <span class="fs-5">Đăng nhập bằng Google</span>
+                        <span class="fs-5">Đăng kí bằng Google</span>
                     </button>
                 </div>
             </div>
             <form action="">
+                <div class="mb-3">
+                    <label for="userName" class="form-label text-start">Tên của bạn*</label>
+                    <input class="form-control" type="email" name="userName" id="userName" placeholder="Phước Anh">
+                </div>
                 <div class="mb-3">
                     <label for="userEmail" class="form-label text-start">Email*</label>
                     <input class="form-control" type="email" name="userEmail" id="userEmail"
@@ -80,8 +84,16 @@
                     <input class="form-control" type="password" name="userPassword" id="userPassword"
                         placeholder="Mật khẩu">
                 </div>
-                <div class="mb-3 text-end">
-                    <a class="text-decoration-none" href="#">Quên mật khẩu</a>
+                <div class="mb-3">
+                    <label for="checkPassword" class="form-label text-start">Nhập lại mật khẩu*</label>
+                    <input class="form-control" type="password" name="checkPassword" id="checkPassword"
+                        placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="mb-3">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="agree" id="agree">
+                        Tôi đã đọc và đồng ý với các <a class="text-decoration-none" href="#">điều khoản sử dụng</a>
+                    </label>
                 </div>
                 <div class="mb-3">
                     <button class="form-control btn btn-outline-success">Đăng Nhập</button>

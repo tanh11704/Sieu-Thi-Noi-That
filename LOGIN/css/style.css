@@ -1,267 +1,161 @@
+/*********** GLOBAL ***********/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
 }
 
-body {
-    font-family: 'open sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
+.wrap {
+    margin: auto 75px;
 }
 
-.container {
-    width: 60%;
-    display: flex;
-    height: 650px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    border-radius: 10px;
-    overflow: hidden;
+header a,
+footer a {
+    color: black;
+    text-decoration: none;
 }
 
-.đk {
+header a:hover,
+footer a:hover {
     color: #D2B89C;
 }
 
-
-
-@keyframes Show {
-
-    0%,
-    49.999% {
-        opacity: 0;
-        z-index: 1;
-    }
-
-    100% {
-        opacity: 1;
-        z-index: 5;
-    }
+input {
+    border: 1px solid lightgray !important;
 }
 
-@keyframes Hidden {
-
-    0%,
-    49.999% {
-        opacity: 1;
-        z-index: 5;
-    }
-
-    100% {
-        opacity: 0;
-        z-index: 1;
-    }
+input:focus {
+    box-shadow: none !important;
 }
 
-.container .box {
-    position: relative;
-    display: flex;
-    height: 100%;
-    width: 50%;
-    transition: all 0.8s;
-    transform: translateX(0);
-    background-color: #fff;
-    z-index: 1;
-    overflow: hidden;
+input::placeholder {
+    color: lightgray;
 }
 
+/*********** HEADER ***********/
 
-.container.active .box {
-    transform: translateX(100%);
-}
-
-.container .box .form {
-    position: absolute;
-    height: 100%;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.container .box .form.sign_up {
-    transition: all 1.15s;
-    z-index: 1;
-    /* opacity: 0; */
-    background-color: #fff;
-}
-
-.container .box .form.sign_in {
-    /* opacity: 1; */
-    transition: all 1.15s;
-    z-index: 5;
-    background-color: #fff;
-}
-
-.container.active .box .form.sign_in {
-    z-index: 1;
-    opacity: 0;
-}
-
-.container.active .box .form.sign_up {
-    z-index: 5;
-    opacity: 1;
-}
-
-.container .overlay {
-    display: flex;
-    height: 100%;
-    width: 50%;
-    transition: all 0.8s;
-    transform: translateX(0);
+header {
     background-color: #D2B89C;
-    z-index: 1;
-    overflow: hidden;
-    z-index: 5;
-    opacity: 1;
 }
 
-.container.active .overlay {
-    transform: translateX(-100%);
+.header__logo i {
+    font-size: 2rem;
 }
 
-.container .overlay .page {
-    height: 100%;
-    min-width: 100%;
-    display: flex;
-    flex-direction: column;
+.background_color_second {
+    background-color: #F3F9FB !important;
+}
+
+.header__search input {
+    box-shadow: none !important;
+}
+
+/*********** NAVIGATION BAR ***********/
+.collapse {
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.5s;
-    opacity: 1;
+
 }
 
-.container.active .overlay .page.page_signIn {
-    opacity: 0;
-    margin-left: -100%;
+.navbar-brand {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-.container.active .overlay .page.page_signUp {
-    margin-left: 0%;
+.navbar-brand:hover {
+    background-color: #d2b89cf1;
+    border-radius: 20px;
+    color: white;
 }
 
-
-.overlay .page h3 {
-    color: #fff;
-    font-size: 40px;
-    margin-bottom: 15px;
+.product-page {
+    background-color: #d2b89cf1;
+    border-radius: 20px;
+    color: white;
 }
 
-.overlay .page p {
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 20px;
-    font-size: 17px;
+nav {
+    background: rgba(20, 20, 20, 0.226);
 }
 
-.btn {
-    display: inline-block;
-    outline: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 550;
-    background-color: transparent;
-    padding: 12px 45px;
-    border-radius: 22px;
-    border: 1.5px solid #fff;
-    cursor: pointer;
-}
-
-.form h3 {
-    color: #222;
-    font-size: 40px;
-}
-
-.form span {
-    color: #3a3838;
-}
-
-#form_input .type {
-    width: 330px;
-    height: 48px;
-    background-color: #EEEDEF;
-    margin: 30px 0;
-}
-
-#form_input .type input {
+/*********** MAIN ***********/
+.login-parent {
     width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background-color: transparent;
+    max-width: 556px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 50px 60px;
 }
 
-#form_input .type input::placeholder {
-    color: #A9A8A9;
+.login-parent>div>div {
+    margin: 15px 0;
 }
 
-#form_input .forgot {
-    margin-bottom: 20px;
-    font-weight: 500;
+.login-parent h3 {
+    font-size: 600;
 }
 
-.bkg {
+.login-parent a {
+    color: #D2B89C;
+}
+
+.login-parent .sign-up {
+    font-size: 0.75rem;
+}
+
+.login-parent .btn-sign-up button {
+    border: 1px solid rgb(206, 201, 201);
+}
+
+.login-parent .btn-sign-up button:hover {
+    background-color: rgb(206, 201, 201);
+}
+
+.login-parent .btn-sign-up button:hover span {
+    color: white;
+}
+
+/*********** FOOTER ***********/
+footer {
     background-color: #D2B89C;
 }
 
-.forgotten {
-    display: none;
+footer a {
+    color: white;
 }
 
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
 
-@media only screen and (max-width: 400px) {
-
-    .container {
-        width: 100% !important;
-        box-shadow: none !important;
-    }
-
-    .overlay {
-        display: none !important;
-
-    }
-
-    .box {
-        width: 100% !important;
-    }
-
-    .forgotten {
-        display: block !important;
+/* RESPONSIVE */
+@media (max-width: 575.98px) {
+    .wrap {
+        margin: auto 0;
     }
 }
 
-@media only screen and (max-width: 850px) {
-
-    .container {
-        width: 100% !important;
-        box-shadow: none !important;
-    }
-
-    .overlay {
-        display: none !important;
-
-    }
-
-    .box {
-        width: 100% !important;
-    }
-
-    .forgotten {
-        display: block !important;
-    }
-
-    .container .box .form.sign_up {
-        opacity: 0;
+@media (max-width: 767.98px) {
+    .wrap {
+        margin: auto 0;
     }
 }
+
+@media (max-width: 991.98px) {
+    .wrap {
+        margin: auto 10px;
+    }
+}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 1399.98px) {}
