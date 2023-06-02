@@ -58,6 +58,11 @@ header {
     color: white;
 }
 
+/* NAV BAR */
+.navbar-toggler-icon{
+    color: black;
+}
+
 /*********** CONTENT ***********/
 .banner-collection-header{
   background-image: url('/img/phongkhach.jpg');
