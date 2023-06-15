@@ -1,3 +1,9 @@
+let imageMain = $("#imgurl img");
+let imagesUrl = $("#listImages img");
+imagesUrl = $.map(imagesUrl, function (element) {
+  return $(element).attr("src");
+});
+
 $(document).ready(function () {
   $(".version").click(function (e) {
     e.preventDefault();
@@ -31,3 +37,9 @@ $(document).ready(function () {
     alert("Thêm vào giỏ hàng thành công!");
   });
 });
+
+function setImage(imgComponent, index) {
+  imgComponent.fadeOut(400, () => {
+    imgComponent.attr("src", imagesUrl[index]).fadeIn(400);
+  });
+}
