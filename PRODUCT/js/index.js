@@ -9,7 +9,7 @@ $(document).ready(function () {
     const price = parseFloat(
       $(this).closest(".box").find(".price").text().replaceAll(",", "")
     );
-    const image_url = "../" + $(this).closest(".box").find("img").attr("src");
+    const image_url = $(this).closest(".box").find("img").attr("src");
 
     let product = {
       name,
