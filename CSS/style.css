@@ -53,19 +53,22 @@ header {
 
 /*********** NAVIGATION BAR ***********/
 
-.navbar {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.nav-item {
+    background-color: #F3F9FB;
+    border-radius: 20px;
+    flex: 1;
+}
+.extra:hover a {
+    background-color: #D2B89C;
+    border-radius: 20px ;
+    color: white !important;
 }
 
-.navi {
-    gap: 1rem;
-    justify-content: center;
 
-}
-.navbar-brand{
-    border: 2px solid #D2B89C;
-    border-radius: 40px;
+.active a {
+    background-color: #D2B89C;
+    border-radius: 20px;
+    color: white !important ;
 }
 
 .carousel-container{
