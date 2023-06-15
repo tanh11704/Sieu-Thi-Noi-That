@@ -21,8 +21,10 @@ $(document).ready(function () {
         .text()
         .replaceAll(",", "")
     );
-    let image_url =
-      "." + $(this).closest(".choose__product").find("#imgurl img").attr("src");
+    let image_url = $(this)
+      .closest(".choose__product")
+      .find("#imgurl img")
+      .attr("src");
 
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -35,6 +37,31 @@ $(document).ready(function () {
     cartItems.push(product);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     alert("Thêm vào giỏ hàng thành công!");
+  });
+
+  let currentImage = 0;
+  setImage(imageMain, currentImage);
+
+  $("#product-image-pre").click(function (e) {
+    e.preventDefault();
+    if (currentImage === 0) {
+      currentImage = imagesUrl.length - 1;
+      setImage(imageMain, currentImage);
+    } else {
+      currentImage--;
+      setImage(imageMain, currentImage);
+    }
+  });
+
+  $("#product-image-next").click(function (e) {
+    e.preventDefault();
+    if (currentImage === imagesUrl.length - 1) {
+      currentImage = 0;
+      setImage(imageMain, currentImage);
+    } else {
+      currentImage++;
+      setImage(imageMain, currentImage);
+    }
   });
 });
 
