@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/admin_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- Thư Viện Charjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="wrapper d-flex">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar__content">
+                <header class="w-100 d-flex">
+                    <span class="d-flex logo-wrapper">
+                        <span class="header__logo h-100 d-flex align-items-center me-1">
+                            <i class="fa fa-stream text-white"></i>
+                        </span>
+                        <span class="header__text d-flex flex-column text-light">
+                            <span class="header-title">APPLE MART</span>
+                            <span class="header-subtitle">Dashboard</span>
+                        </span>
+                    </span>
+                    <button class="sidebar-toggle transparent-btn">
+                        <i class="fa fa-caret-square-left text-white fs-4"></i>
+                    </button>
+                </header>
+                <hr class="bg-light my-3">
+                <main class="sidebar-body">
+                    <ul class="sidebar-body-menu">
+                        <li>
+                            <a class="active" href="./index.html"><i class="fa fa-home"></i>Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a href="./analysys.html"><i class="fa fa-chart-line"></i>Phân Tích</a>
+                        </li>
+                        <li>
+                            <a class="show-cat-btn" href="">
+                                <i class="fa fa-user-circle"></i>
+                                Tài Khoản
+                                <span class="category__btn transparent-btn">
+                                    <i class="fa fa-chevron-circle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="cat-sub-menu">
+                                <li><a href="./change-info.html">Sửa thông tin</a></li>
+                                <li><a href="./acount-setting.html">Quản lý tài khoản</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="show-cat-btn" href="">
+                                <i class="fa fa-edit"></i>Quản Lý
+                                <span class="category__btn transparent-btn">
+                                    <i class="fa fa-chevron-circle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="cat-sub-menu">
+                                <li><a href="./list-products.html">Danh Sách Sản Phẩm</a></li>
+                                <li><a href="./order.html">Đơn Hàng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </main>
+            </div>
+            <div class="sidebar__footer">
+                <div class="sidebar-user d-flex p-1 rounded-1">
+                    <div class="sidebar-user-img d-flex">
+                        <img class="rounded-circle" src="./img/icons8-avatar.gif" alt="">
+                    </div>
+                    <div class="sidebar-user-info d-flex flex-column">
+                        <span class="sidebar-user-title">
+                            P. Anh
+                        </span>
+                        <span class="sidebar-user-subtitle">
+                            Quản Lý
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main class="main d-block">
+
+            <nav class="main-nav">
+                <div class="container py-2">
+                    <button class="sidebar-toggle transparent-btn"><i class="fa fa-caret-square-left fs-4"
+                            style="color: lightgray;"></i></button>
+                </div>
+            </nav>
+
+            <div class="container p-4">
+                <h2 class="main-title fw-bold fs-5 lh-1 mb-4">Bảng Điều Khiển</h2>
+                <div class="row stat-card">
+                    <div class="col-md-6 col-xl-3 px-3 py-2 mb-3">
+                        <div class="bg-white px-3 py-2 rounded-3">
+                            <div class="stat-title">Tổng Đơn Đặt Mua</div>
+                            <div class="stat-info d-flex justify-content-between align-items-end">
+                                <div class="stat-count fs-4 fw-bold">600</div>
+                                <i class="fa fa-wallet fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 px-3 py-2 mb-3">
+                        <div class="bg-white px-3 py-2 rounded-3">
+                            <div class="stat-title">Tỉ Lệ Phản Hồi</div>
+                            <div class="stat-info d-flex justify-content-between align-items-end">
+                                <div class="stat-count fs-4 fw-bold">30.5%</div>
+                                <i class="fa fa-comment-alt fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 px-3 py-2 mb-3">
+                        <div class="bg-white px-3 py-2 rounded-3">
+                            <div class="stat-title">Tổng Lợi Nhuận</div>
+                            <div class="stat-info d-flex justify-content-between align-items-end">
+                                <div class="stat-count fs-4 fw-bold">~ 67.5tr VNĐ</div>
+                                <i class="fa fa-chart-line fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 px-3 py-2 mb-3">
+                        <div class="bg-white px-3 py-2 rounded-3">
+                            <div class="stat-title">Lưu Lượng Truy Cập</div>
+                            <div class="stat-info d-flex justify-content-between align-items-end">
+                                <div class="stat-count fs-5 fw-bold">4500 / Tháng</div>
+                                <i class="fa fa-user fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart w-100 bg-white rounded-3 mb-3">
+                    <canvas class="p-3 w-100" id="myChart" role="img"></canvas>
+                </div>
+                <div class="recent-orders overflow-scroll">
+                    <table style="min-width: 1400px;" class="gap-5">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="form-check-label ms-3">
+                                        <input type="checkbox" class="form-check-input shadow-none" name="" id=""
+                                            value="checkedValue">
+                                        Sản phẩm
+                                    </label>
+                                </th>
+                                <th>Tên sản phẩm</th>
+                                <th>Khách hàng</th>
+                                <th>Tính trạng đơn hàng</th>
+                                <th>Tình trạng thanh toán</th>
+                                <th>Ngày</th>
+                                <th>Giá</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <td>
+                                    <label class="form-check-label d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input shadow-none me-3" name="" id=""
+                                            value="checkedValue">
+                                        <img src="./img/ip14-prm-black.webp" alt="" style="max-height: 50px;">
+                                    </label>
+                                </td>
+                                <td>iPhone 14 Promax - chính hãng VN/A</td>
+                                <td>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <img src="./img/icons8-avatar.gif" alt="ảnh đại diện" style="max-width: 30px;">
+                                        <small>Trần Phước Anh</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="processing">Đang giao hàng</span>
+                                </td>
+                                <td class="paid">
+                                    <div class="dot rounded-circle d-inline-block"></div>
+                                    Đã thanh toán
+                                </td>
+                                <td>16-06-2023</td>
+                                <td>26.000.000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input shadow-none me-3" name="" id=""
+                                            value="checkedValue">
+                                        <img src="./img/ip14-prm-black.webp" alt="" style="max-height: 50px;">
+                                    </label>
+                                </td>
+                                <td>iPhone 14 Promax - chính hãng VN/A</td>
+                                <td>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <img src="./img/icons8-avatar.gif" alt="ảnh đại diện" style="max-width: 30px;">
+                                        <small>Trần Phước Anh</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="delivery">Đang giao hàng</span>
+                                </td>
+                                <td class="paid">
+                                    <div class="dot rounded-circle d-inline-block"></div>
+                                    Đã thanh toán
+                                </td>
+                                <td>16-06-2023</td>
+                                <td>26.000.000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="form-check-label d-flex align-items-center">
+                                        <input type="checkbox" class="form-check-input shadow-none me-3" name="" id=""
+                                            value="checkedValue">
+                                        <img src="./img/ip14-prm-black.webp" alt="" style="max-height: 50px;">
+                                    </label>
+                                </td>
+                                <td>iPhone 14 Promax - chính hãng VN/A</td>
+                                <td>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <img src="./img/icons8-avatar.gif" alt="ảnh đại diện" style="max-width: 30px;">
+                                        <small>Trần Phước Anh</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="successful">Đang giao hàng</span>
+                                </td>
+                                <td class="unpaid">
+                                    <div class="dot rounded-circle d-inline-block"></div>
+                                    Chưa thanh toán
+                                </td>
+                                <td>16-06-2023</td>
+                                <td>26.000.000 VNĐ</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src=" ./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
