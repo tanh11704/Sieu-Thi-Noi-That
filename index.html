@@ -1,73 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <!-- Boostrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./CSS/style.css">
     <title>Trang chủ</title>
 </head>
 
 <body>
-
-    <!-- HEADER -->
     <header>
         <section>
             <div class="wrap d-flex justify-content-between align-items-center">
-                <div class="header__logo d-flex align-items-center ">
-                    <img src="./img/logo.png" class="me-2" alt="">
+                <div class="header__logo d-flex align-items-center">
+                    <img src="../img/logo.png" class="me-2" alt="">
                     <div class="text-white">
                         <b>GIA ĐÌNH</b> <br>
                         <b>LÀ SỐ 1</b> <br>
                         Furniture Home
                     </div>
                 </div>
-                <div class="header__search  input-group w-50 ">
+                <div class="header__search  input-group w-50">
                     <span class="input-group-text border-0 background_color_second" style="background-color: white;"><i
                             class="fa fa-search"></i></span>
                     <input type="text" class="form-control border-0 background_color_second p-2"
                         placeholder="Tìm kiếm sản phẩm">
                     <span class="input-group-text background_color_second border-0"></span>
                 </div>
-                <div class="header__user ms-2  ">
-                    <a class="me-2 text-decoration-none text-white  col-xs-12 " href="./LOGIN/index.html">
+                <div class="header__user ms-2">
+                    <a class="me-2 text-decoration-none text-white" href="./LOGIN/index.html">
                         <i class="fa fa-user"></i>
                         <span class="ms-2">Đăng nhập</span>
                     </a>
                     <span class="text-white me-2">|</span>
-                    <a class="me-2 text-decoration-none text-white col-xs-12 " href="./CART/index.html">
+                    <a class="me-2 text-decoration-none text-white" href="./CART/index.html">
                         <i class="fa fa-shopping-cart"></i>
                         <span class="ms-2">Giỏ hàng</span>
                     </a>
                 </div>
             </div>
         </section>
-
-       
-
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navi collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand home-page" href="#">Trang Chủ</a>
-                    <a class="navbar-brand" href="./PRODUCT/phongkhach.html">Phòng Khách </a>
-                    <a class="navbar-brand" href="./PRODUCT/phongan.html">Phòng Ăn</a>
-                    <a class="navbar-brand" href="./PRODUCT/Phongngu.html">Phòng Ngủ</a>
-                    <a class="navbar-brand" href="./PRODUCT/phonglamviec.html">Phòng Làm Việc</a>
-                </div>
-            </div>
-        </nav> -->
-
     </header>
     <nav class="header__navbar navbar-expand-md navbar-light my-2">
         <div class="wrap">
@@ -89,13 +76,13 @@
                                 <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
                             </a>
                         </li>
-                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra ">
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra">
                             <a class="nav-link" href="./PRODUCT/phongkhach.html">
                                 Phòng Khách
                                 <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
                             </a>
                         </li>
-                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra ">
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra">
                             <a class="nav-link" href="./PRODUCT/phongan.html">
                                 Phòng Ăn
                                 <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
@@ -120,7 +107,6 @@
             </div>
         </div>
     </nav>
-    
     <!-- carsouse start -->
     <section class="carousel">
         <div class="wrap">
@@ -240,10 +226,10 @@
                         </button>
                     </a>
 
-                    <a href="./DES_PRODUCT/GheSofaNgoiThuGian.html" class="col-12 col-xl-3 my-2  box">
-                        <img src="img/ghe-sofa-cafe-thu-gian-dan-may-1-1660644126.jpg" alt="">
+                    <a href="./DES_PRODUCT/GiuongNguPhilly.html" class="col-12 col-xl-3 my-2  box">
+                        <img src="./DES_PRODUCT/img/phongngu1.jpg" alt="">
                         <div class="card-body">
-                            <h5>Ghế sofa ngồi thư giãn</h5>
+                            <h5>Giường Ngủ Philly</h5>
                             <p><del>2,365,000 đ</del></p>
                             <h6>2,000,000 đ</h6>
                         </div>
@@ -252,10 +238,37 @@
                         </button>
                     </a>
 
-                
+                    <a href="./DES_PRODUCT/GheSofaThongMinh.html" class="col-12 col-xl-3 my-4 box">
+                        <img src="img/sofa1.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Ghế sofa Thông Minh Trắng</h5>
+                            <p><del>3,757,000 đ</del></p>
+                            <h6>3,100,000 đ</h6>
+                        </div>
+                        <button href="" class="addToCart">
+                            Giỏ hàng
+                        </button>
+                    </a>
+
+                 
+                  
+
+                    <a href="./DES_PRODUCT/TuQuanAoBlanco.html" class="col-12 col-xl-3 my-4 box">
+                        <img src="./DES_PRODUCT/img/phongngu2.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Tủ Quần Áo Blanco Trắng</h5>
+                            <p><del>23,656,000 đ</del></p>
+                            <h6>21,875,000 đ</h6>
+                        </div>
+                        <button href="" class="addToCart">
+                            Giỏ hàng
+                        </button>
+                    </a>
+
+
                     <a href="./DES_PRODUCT/GheSofaNgoiThuGian.html" class="col-12 col-xl-3 my-4 box">
                         <img src="img/ghe-sofa-cafe-thu-gian-dan-may-1-1660644126.jpg" alt="">
-                        <div class="card-body">
+                        <div  class="card-body">
                             <h5>Ghế sofa ngồi thư giãn</h5>
                             <p><del>2,365,000 đ</del></p>
                             <h6>2,000,000 đ</h6>
@@ -264,45 +277,6 @@
                             Giỏ hàng
                         </button>
                     </a>
-
-                    <a href="./DES_PRODUCT/GheSofaThongMinh.html" class="col-12 col-xl-3 my-4 box">
-                        <img src="img/sofa1.jpg" alt="">
-                        <div class="card-body">
-                            <h5>Ghế sofa Thông Minh</h5>
-                            <p><del>3,757,000 đ</del></p>
-                            <h6>3,100,000 đ</h6>
-                        </div>
-                        <button href="" class="addToCart">
-                            Giỏ hàng
-                        </button>
-                    </a>
-
-                    <a href="./DES_PRODUCT/GiuongDonChoTre.html" class="col-12 col-xl-3 my-4 box">
-                        <img src="img/giuong-don-cho-tre.jpg" alt="">
-                        <div class="card-body">
-                            <h5>Giường đơn cho trẻ</h5>
-                            <p><del>6,657,000 đ</del></p>
-                            <h6>5,550,000 đ</h6>
-                        </div>
-                        <button href="" class="addToCart">
-                            Giỏ hàng
-                        </button>
-                    </a>
-
-                    <a href="./DES_PRODUCT/GheSofaThongMinh.html" class="col-12 col-xl-3 my-4 box">
-                        <img src="img/sofa1.jpg" alt="">
-                        <div class="card-body">
-                            <h5>Ghế sofa Thông Minh</h5>
-                            <p><del>3,757,000 đ</del></p>
-                            <h6>3,100,000 đ</h6>
-                        </div>
-                        <button href="" class="addToCart">
-                            Giỏ hàng
-                        </button>
-                    </a>
-
-
-                
 
                     <a href="./DES_PRODUCT/SofaBangDaiScala3Cho.html" class="col-12 col-xl-3 my-4 box">
                         <img src="./img/phongkhach1.jpg" alt="phongkhach1">
@@ -338,6 +312,19 @@
                         </button>
                     </a>
 
+
+                    <a href="./DES_PRODUCT/GiuongDonChoTre.html" class="col-12 col-xl-3 my-4 box">
+                        <img src="img/giuong-don-cho-tre.jpg" alt="">
+                        <div class="card-body">
+                            <h5>Giường đơn cho trẻ</h5>
+                            <p><del>6,657,000 đ</del></p>
+                            <h6>5,550,000 đ</h6>
+                        </div>
+                        <button href="" class="addToCart">
+                            Giỏ hàng
+                        </button>
+                    </a>
+                    
                     <a href="./DES_PRODUCT/GheSofaThongMinh.html" class="col-12 col-xl-3 my-4 box">
                         <img src="img/sofa1.jpg" alt="">
                         <div class="card-body">
@@ -415,9 +402,8 @@
     </footer>
 
     <script src="./JS/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>

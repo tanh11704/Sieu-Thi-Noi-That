@@ -141,7 +141,7 @@ del {
 #products .box-container .row {
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-self: space-around;
 }
 
 #products .box-container .row .box{
@@ -170,11 +170,12 @@ del {
 #products .box-container .row  .addToCart {
     border: 1px solid #D2B89C;
     border-radius: 20px;
-    margin: 0 112px;
+    margin: 0 90px;
     background-color: white;
     color: #D2B89C;
     padding: 5px 25px;
     font-size: 18px;
+    width: 125px;
 }
 #products .box-container .row  .addToCart:hover{
     background-color: #D2B89C;
@@ -325,6 +326,10 @@ footer a:hover {
     .wrap {
         margin: auto 0;
     }
+    /* .wrap .header__user {
+        display: flex;
+        flex-wrap: wrap;
+    } */
 }
 
 @media (max-width: 767.98px) {
@@ -332,7 +337,11 @@ footer a:hover {
         margin: auto 0;
     }
 }
-
+/* @media (max-width: 375.98px){
+    .wrap .header__logo {
+        font-size: 12px !important;
+    }
+} */
 @media (max-width: 991.98px) {
     .wrap {
         margin: auto 10px;

@@ -9,13 +9,13 @@ $(document).ready(function () {
     let agree = $(form).find("input[name='agree']").is(":checked");
 
     if (agree === false) {
-      alert("Vui lòng đồng ý với các điều khoản của chúng tôi để tiếp tục!");
-    } else if (userPassword !== checkPassword) {
-      alert("Hai mật khẩu không khớp nhau!");
+      swal("Vui lòng đồng ý với các điều khoản của chúng tôi để tiếp tục!","","warning");
     } else if (userEmail === "" || userName === "" || userPassword === "") {
-      alert("Vui lòng điền đầy đủ thông tin!");
+      swal("Vui lòng điền đầy đủ thông tin!","","warning");
+    } else if (userPassword !== checkPassword) {
+      swal("Hai mật khẩu không khớp nhau!","","error");
     } else {
-      alert("Đăng kí thành công!");
+      swal("Đăng kí thành công!","","success");
     }
   });
 });

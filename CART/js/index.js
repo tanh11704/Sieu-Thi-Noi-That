@@ -108,35 +108,49 @@ $(document).ready(function () {
     let district = $(this).find('select[name="district"]').val();
     let paymentMethod = $(this).find("#payment-selected").val();
     if (totalPrice === 0) {
-      alert("Vui lòng chọn sản phẩm để thanh toán!");
+      swal("Vui lòng chọn đơn hàng để thanh toán!", "","error");
     } else if (fullName.length === 0) {
-      alert("Vui lòng nhập họ tên của bạn!");
+      swal("Vui lòng nhập họ và tên của bạn!","","error");
     } else if (checkPhoneNumber(phoneNumber) === false) {
-      alert("Vui lòng nhập đúng định dạng số điện thoại!");
+      swal("Vui lòng nhập đúng định dạng số điện thoại!" ,"","error");
     } else if (checkMail(email) === false) {
-      alert("Vui lòng nhập đúng định dạng email!");
-    } else if (province === 0) {
-      alert("Vui lòng chọn Tỉnh thành của bạn!");
-    } else if (district === 0) {
-      alert("Vui lòng chọn Huyện của bạn!");
-    } else if (paymentMethod === 0) {
-      alert("Vui lòng chọn hình thức thanh toán!");
+      swal("Vui lòng nhập đúng định dạng email!","","error");
+    } else if (province === "0") {
+      swal("Vui lòng chọn Tỉnh thành của bạn!","","error");
+    } else if (district === "0") {
+      swal("Vui lòng chọn Quận của bạn!","","error");
+    } else if (paymentMethod === "0") {
+      swal("Vui lòng chọn hình thức thanh toán!","","error");
     } else {
-      alert("Thanh toán thành công!");
-      let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      let checkedElement = $(
-        ".content__body__products input[type='checkbox']:checked"
-      );
-      let listProductsCheckedElements = $(checkedElement).closest(".card-body");
-      $(listProductsCheckedElements).each(function () {
-        let nameProductChecked = $(this).find("h5").text();
-        cartItems = cartItems.filter(
-          (item) => item.name !== nameProductChecked
-        );
-      });
+      swal({
+        title: "Bạn có muốn thanh toán đơn hàng không?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((cartItems) => {
+        if (cartItems) {
+          let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+          let checkedElement = $(
+            ".content__body__products input[type='checkbox']:checked"
+          );
+          let listProductsCheckedElements =
+            $(checkedElement).closest(".card-body");
+          $(listProductsCheckedElements).each(function () {
+            let nameProductChecked = $(this).find("h5").text();
+            cartItems = cartItems.filter(
+              (item) => item.name !== nameProductChecked
+            );
+          });
 
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      loadProducts();
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          loadProducts();
+          swal("Thanh toán đơn hàng thành công!", {
+            icon: "success",
+          });
+        } else {
+          swal("Thanh toán đơn hàng thất bại!");
+        }
+      });
     }
   });
 
@@ -262,7 +276,9 @@ function loadProducts() {
                   <div class="row pe-5 mb-2">
                       <div class="col">Đơn giá</div>
                       <div class="col">
-                          <span class="price__color fw-bold price"> ${product.price.toLocaleString("en")} </span>
+                          <span class="price__color fw-bold price"> ${product.price.toLocaleString(
+                            "en"
+                          )} </span>
                       </div>
                   </div>
                   <div class="row pe-5 mb-2">

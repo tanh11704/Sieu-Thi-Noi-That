@@ -19,6 +19,11 @@ $(document).ready(function () {
 
     cartItems.push(product);
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    alert("Thêm vào giỏ hàng thành công!");
+    if (cartItems){
+      swal("Thêm vào giỏ hàng thành công!",{
+        icon: "success",
+      });
+    }
+
   });
 });
