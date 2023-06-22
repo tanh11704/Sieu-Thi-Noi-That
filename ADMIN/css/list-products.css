@@ -1,0 +1,80 @@
+table {
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 1140px;
+    max-height: 440px;
+}
+
+.user-manage {
+    padding: 20px;
+}
+
+#account-table th:last-child,
+#account-table td:last-child {
+    position: relative;
+}
+
+table .ribbon {
+    width: 100px;
+    position: absolute;
+    top: 75%;
+    right: 75%;
+    background-color: #F3F9FB;
+    display: flex;
+    flex-direction: column;
+}
+
+table .ribbon::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #F3F9FB;
+}
+
+table .ribbon button {
+    background-color: #F3F9FB;
+    border: 0;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, .55);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table .ribbon button:hover {
+    color: black;
+    background-color: #eaeaea;
+}
+
+.more-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#account-table td:last-child:hover .ribbon {
+    visibility: visible;
+}
+
+#account-table button i {
+    opacity: 0.6;
+}
+
+#account-table button:hover i {
+    opacity: 1;
+}
+
+#add-account-btn {
+    background-color: #D2B89C;
+    box-shadow: none;
+    border: none;
+}
+
+#add-account-btn:hover {
+    transform: translateY(-5px);
+}

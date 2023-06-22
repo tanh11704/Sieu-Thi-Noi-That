@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Thư viện Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.js"
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- Thư viện Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Thư Viện SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <title>Đăng nhập</title>
 </head>
 
@@ -29,23 +36,57 @@
                 </div>
             </div>
         </section>
-        <nav class="navbar navbar-expand-lg">
+    </header>
+    <nav class="header__navbar navbar-expand-md navbar-light my-2">
+        <div class="wrap">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="../index.html">TRANG CHỦ</a>
-                    <a class="navbar-brand" href="../PRODUCT/phongkhach.html">PHÒNG KHÁCH</a>
-                    <a class="navbar-brand" href="../PRODUCT/phongan.html">PHÒNG ĂN</a>
-                    <a class="navbar-brand" href="../PRODUCT/Phongngu.html">PHÒNG NGỦ</a>
-                    <a class="navbar-brand" href="../PRODUCT/phonglamviec.html">PHÒNG LÀM VIỆC</a>
+                <div class="navbar-toggler d-flex border-0 align-items-center ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <span class="navbar-toggler border-0" href="#" style="color:#D2B89C;">Danh sách sản
+                        phẩm</span>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav justify-content-between w-100">
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1">
+                            <a class="nav-link" href="../index.html">
+                                Trang Chủ
+                                <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra ">
+                            <a class="nav-link" href="../PRODUCT/phongkhach.html">
+                                Phòng Khách
+                                <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra ">
+                            <a class="nav-link" href="../PRODUCT/phongan.html">
+                                Phòng Ăn
+                                <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra">
+                            <a class="nav-link" href="../PRODUCT/Phongngu.html">
+                                Phòng Ngủ
+                                <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mx-1 mx-lg-2 text-center mb-1 extra">
+                            <a class="nav-link" href="../PRODUCT/phonglamviec.html">
+                                Phòng Làm Việc
+                                <i class="fa fa-angle-down ps-1 ps-lg-2"></i>
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main class="login-component my-3 d-flex justify-content-center">
         <section class="login-parent">
