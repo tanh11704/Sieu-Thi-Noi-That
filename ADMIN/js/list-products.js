@@ -14,19 +14,19 @@ $(document).ready(function () {
 var products = [
   {
     id: 1,
-    image: "./img/ip14-prm-black.webp",
-    name: "Iphone 14 ProMax - Chính hãng VN/A",
-    type: "iPhone",
-    costPrice: "15000000",
-    sellPrice: "25000000",
+    image: "./../img/Tu-quan-ao.jpg",
+    name: "Tủ Áo Quần Hiện Đại",
+    type: "phòng ngủ",
+    costPrice: "1000000",
+    sellPrice: "1500000",
   },
   {
     id: 2,
-    image: "./img/ip14-prm-black.webp",
-    name: "Iphone 14 ProMax - Chính hãng VN/A",
-    type: "iPhone",
-    costPrice: "15000000",
-    sellPrice: "25000000",
+    image: "./../img/Tu-quan-ao.jpg",
+    name: "Tủ Áo Quần Hiện Đại",
+    type: "phòng ngủ",
+    costPrice: "1000000",
+    sellPrice: "1500000",
   },
 ];
 

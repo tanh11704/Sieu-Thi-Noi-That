@@ -108,19 +108,19 @@ $(document).ready(function () {
     let district = $(this).find('select[name="district"]').val();
     let paymentMethod = $(this).find("#payment-selected").val();
     if (totalPrice === 0) {
-      swal("Vui lòng chọn đơn hàng để thanh toán!", "","error");
+      swal("Vui lòng chọn đơn hàng để thanh toán!", "", "error");
     } else if (fullName.length === 0) {
-      swal("Vui lòng nhập họ và tên của bạn!","","error");
+      swal("Vui lòng nhập họ và tên của bạn!", "", "error");
     } else if (checkPhoneNumber(phoneNumber) === false) {
-      swal("Vui lòng nhập đúng định dạng số điện thoại!" ,"","error");
+      swal("Vui lòng nhập đúng định dạng số điện thoại!", "", "error");
     } else if (checkMail(email) === false) {
-      swal("Vui lòng nhập đúng định dạng email!","","error");
+      swal("Vui lòng nhập đúng định dạng email!", "", "error");
     } else if (province === "0") {
-      swal("Vui lòng chọn Tỉnh thành của bạn!","","error");
+      swal("Vui lòng chọn Tỉnh thành của bạn!", "", "error");
     } else if (district === "0") {
-      swal("Vui lòng chọn Quận của bạn!","","error");
+      swal("Vui lòng chọn Quận của bạn!", "", "error");
     } else if (paymentMethod === "0") {
-      swal("Vui lòng chọn hình thức thanh toán!","","error");
+      swal("Vui lòng chọn hình thức thanh toán!", "", "error");
     } else {
       swal({
         title: "Bạn có muốn thanh toán đơn hàng không?",
