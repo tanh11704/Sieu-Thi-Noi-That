@@ -1,0 +1,25 @@
+.info {
+    font-size: 0.5rem;
+    background-color: #fff;
+}
+
+.info__body__avatar .avatar {
+    width: 300px;
+    height: 300px;
+    background-image: url('../../img/Ban-tra.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.choose-avatar {
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.avatar-input {
+    display: none;
+}

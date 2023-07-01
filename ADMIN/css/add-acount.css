@@ -1,0 +1,25 @@
+.info {
+    font-size: 0.5rem;
+    background-color: #fff;
+}
+
+.info__body__avatar .avatar {
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/icons8-avatar.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.choose-avatar {
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.avatar-input {
+    display: none;
+}
